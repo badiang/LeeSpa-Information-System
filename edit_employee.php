@@ -53,14 +53,14 @@
       <input name="lastname" type="text" value="<?php  echo $row['lastname'];  ?>" class="form-control"  id="validationCustom02"  value="" required>
      </div>
    <div class="col-md-4 mb-3">
-      <label for="validationCustom02">Middle Name</label>
+      <label for="validationCustom02">Middle Initial</label>
       <input name="middle_name" type="text" value="<?php  echo $row['lastname'];  ?>" class="form-control"  id="validationCustom02"  value="" required>
      </div>
 	 
 	 
           <form class="myform" method="post">
                     <input class="btn" type="submit" name ="update" id="save_btn" value="Update"/>
-                    <a href ="read.php"><input class="btn" type="button" id="list_btn" value="Read"/><br></a>
+                    <a href ="read_employee.php"><input class="btn" type="button" id="list_btn" value="Read"/><br></a>
           </form>
     </form>
 </body>
