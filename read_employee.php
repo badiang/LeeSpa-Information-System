@@ -18,6 +18,7 @@ require 'connect2.php';
       		<th>ID Number</th>
       		<th>First Name</th>
 			<th>Last Name</th>
+			<th>Middle Initial</th>
             <th >Action</th>
       	</tr>
 	       	<?php
@@ -27,6 +28,7 @@ require 'connect2.php';
 						<td><?php echo $information['id_number'] ?></td>
 						<td><?php echo $information['firstname'] ?></td>
 						<td><?php echo $information['lastname'] ?></td>
+						<td><?php echo $information['middle_name'] ?></td>
 						<td>
 								<a href="delete_employee.php?delete_id=<?php echo $information['id_number']; ?>">Delete</i></a>
 						</td>

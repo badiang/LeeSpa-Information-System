@@ -4,10 +4,11 @@
   if(isset($_POST['save'])){
     $id_number = $_POST['id_number'];
     $firstname = $_POST['firstname'];
-	  $lastname = $_POST['lastname'];
+	$lastname = $_POST['lastname'];
+	$middle_name = $_POST['middle_name'];
 	
  
-    $insert_information = "INSERT INTO `employee` (`id_number`, `firstname`, `lastname` ) VALUES ('$id_number', '$firstname','$lastname')";
+    $insert_information = "INSERT INTO `employee` (`id_number`, `firstname`, `lastname`, `middle_name` ) VALUES ('$id_number', '$firstname','$lastname','$middle_name')";
     
     if (mysqli_query($con, $insert_information)) {
       echo"
@@ -31,7 +32,7 @@
 		 <form class="needs-validation" action="" method='post'>
   			<div class="textbox">
 				<div class="textbox">
-	      			<label for="validationCustom01">ID Number</label>
+	      			ID Number
 	      			<input name="id_number" type="text" class="form-control" id="validationCustom01" placeholder="Employee ID Number"  autofocus required>
     			</div>
 				<div class="textbox">
@@ -41,6 +42,10 @@
 				<div class="textbox">
 	      			<label for="validationCustom01">Last Name</label>
 	      			<input name="lastname" type="text" class="form-control" id="validationCustom01" placeholder="Last Name"  autofocus required>
+    			</div>
+    			<div class="textbox">
+	      			<label for="validationCustom01">Middle Initial</label>
+	      			<input name="middle_name" type="text" class="form-control" id="validationCustom01" placeholder="Middle Initial"  autofocus required>
     			</div>
 				
     		</div>

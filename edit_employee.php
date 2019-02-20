@@ -15,11 +15,11 @@
 		$id_number = $_POST['id_number'];
 		$firstname = $_POST['firstname'];
 		$lastname = $_POST['lastname'];
-;
+    $middle_name = $_POST['middle_name'];
 		
 
     
-    $update = "UPDATE `employee` SET `id_number`='$id_number',`firstname`='$firstname',`lastname`='$lastname' WHERE id_number=".$contact_id;
+    $update = "UPDATE `employee` SET `id_number`='$id_number',`firstname`='$firstname',`lastname`='$lastname',`middle_name`='$middle_name' WHERE id_number=".$contact_id;
     if (mysqli_query($con, $update)) {
 
       header('location: read_employee.php');
@@ -51,6 +51,10 @@
 	 <div class="col-md-4 mb-3">
       <label for="validationCustom02">Last Name</label>
       <input name="lastname" type="text" value="<?php  echo $row['lastname'];  ?>" class="form-control"  id="validationCustom02"  value="" required>
+     </div>
+   <div class="col-md-4 mb-3">
+      <label for="validationCustom02">Middle Name</label>
+      <input name="middle_name" type="text" value="<?php  echo $row['lastname'];  ?>" class="form-control"  id="validationCustom02"  value="" required>
      </div>
 	 
 	 

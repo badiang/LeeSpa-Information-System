@@ -20,7 +20,7 @@
 		
 
     
-    $update = "UPDATE `service` SET `servicecode`='$servicecode',`description`='$description',`price`='$price',`duration`='$duration',`commission`='$commssion' WHERE servicecode=".$contact_id;
+    $update = "UPDATE `service` SET `servicecode`='$servicecode',`description`='$description',`price`='$price',`duration`='$duration',`commission`='$commission' WHERE servicecode=".$contact_id;
     if (mysqli_query($con, $update)) {
 
       header('location: read.php');
