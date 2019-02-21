@@ -34,6 +34,7 @@
 <html>
   <title>Lee Spa</title>
 <body>
+  
     <h1>Employee</h1>
      <h3>Edit Employee List</h3>
       <form action="edit_employee.php?edit_id=<?php echo $_GET['edit_id']; ?>" method='post'>
@@ -54,7 +55,7 @@
      </div>
    <div class="col-md-4 mb-3">
       <label for="validationCustom02">Middle Initial</label>
-      <input name="middle_name" type="text" value="<?php  echo $row['lastname'];  ?>" class="form-control"  id="validationCustom02"  value="" required>
+      <input name="middle_name" type="text" value="<?php  echo $row['middle_name'];  ?>" class="form-control"  id="validationCustom02"  value="" required>
      </div>
 	 
 	 
