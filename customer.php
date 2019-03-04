@@ -6,9 +6,11 @@
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $middle_initial = $_POST['middle_initial'];
+    $address = $_POST['address'];
+    $contact = $_POST['contact'];
   
  
-    $insert_information = "INSERT INTO `customer` (`id_number`, `firstname`, `lastname`, `middle_initial` ) VALUES ('$id_number', '$firstname','$lastname','$middle_initial')";
+    $insert_information = "INSERT INTO `customer` (`id_number`, `firstname`, `lastname`, `middle_initial`, `address`, `contact` ) VALUES ('$id_number', '$firstname','$lastname','$middle_initial','$address','$contact')";
     
     if (mysqli_query($con, $insert_information)) {
       echo"
@@ -46,6 +48,14 @@
           <div class="textbox">
               <label for="validationCustom01">Middle Initial</label>
               <input name="middle_initial" type="text" class="form-control" id="validationCustom01" placeholder="Middle Initial"  autofocus required>
+          </div>
+          <div class="textbox">
+              <label for="validationCustom01">Home Address</label>
+              <input name="address" type="text" class="form-control" id="validationCustom01" placeholder="Home Address"  autofocus required>
+          </div>
+          <div class="textbox">
+              <label for="validationCustom01">Contact Number</label>
+              <input name="contact" type="number" class="form-control" id="validationCustom01" placeholder="Contact Number"  autofocus required>
           </div>        
         </div>
           <form class="myform" method="post">

@@ -4,8 +4,8 @@
   if(isset($_POST['save'])){
     $id_number = $_POST['id_number'];
     $firstname = $_POST['firstname'];
-	$lastname = $_POST['lastname'];
-	$middle_name = $_POST['middle_name'];
+  	$lastname = $_POST['lastname'];
+	  $middle_name = $_POST['middle_name'];
 	
  
     $insert_information = "INSERT INTO `employee` (`id_number`, `firstname`, `lastname`, `middle_name` ) VALUES ('$id_number', '$firstname','$lastname','$middle_name')";

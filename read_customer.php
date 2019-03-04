@@ -19,6 +19,8 @@ require 'connect2.php';
       		<th>First Name</th>
 			<th>Last Name</th>
 			<th>Middle Initial</th>
+			<th>Home Address</th>
+			<th>Contact Number</th>
             <th >Action</th>
       	</tr>
 	       	<?php
@@ -29,6 +31,8 @@ require 'connect2.php';
 						<td><?php echo $information['firstname'] ?></td>
 						<td><?php echo $information['lastname'] ?></td>
 						<td><?php echo $information['middle_initial'] ?></td>
+						<td><?php echo $information['address'] ?></td>
+						<td><?php echo $information['contact'] ?></td>
 						<td>
 								<a href="delete_customer.php?delete_id=<?php echo $information['id_number']; ?>">Delete</i></a>
 						</td>
