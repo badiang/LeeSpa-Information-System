@@ -53,9 +53,7 @@ Username : <input type= "text" name="username"><br><br>
 Password : <input type ="password" name="password"><br><br>
 </div>
 <input class="btn" name="login"  type="Submit" value="Submit">
-<p>
-	Doesn't have account? <a href="register.html">Sign in</a>
-</p>
+
 
 
 </form>
