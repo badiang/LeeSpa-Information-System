@@ -47,7 +47,7 @@
           </div>
           <div class="textbox">
               <label for="validationCustom01">Middle Initial</label>
-              <input name="middle_initial" type="text" class="form-control" id="validationCustom01" placeholder="Middle Initial"  autofocus required>
+              <input name="middle_initial" type="text" class="form-control" id="validationCustom01" placeholder="Middle Initial"  >
           </div>
           <div class="textbox">
               <label for="validationCustom01">Home Address</label>

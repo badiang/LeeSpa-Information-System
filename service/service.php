@@ -46,7 +46,7 @@
     			</div>
 				<div class="textbox">
 	      			<label for="validationCustom01">Duration</label>
-	      			<input name="duration" type="text" class="form-control" id="validationCustom01" placeholder="Duration"  autofocus required>
+	      			<input name="duration" type="text" class="form-control" id="validationCustom01" placeholder="Duration"  >
     			</div>
 				<div class="textbox">
 	      			<label for="validationCustom01">Commission</label>

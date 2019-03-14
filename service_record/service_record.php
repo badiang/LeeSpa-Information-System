@@ -2,13 +2,13 @@
   session_start();
   require 'connect2.php';
   if(isset($_POST['save'])){
-  /*$id = $_POST['id'];*/
+  $id = $_POST['id'];
   $servicecode = $_POST['servicecode'];
   $id_number = $_POST['id_number'];
   $commission = $_POST['commission'];
 
  
-    $insert_information = "INSERT INTO `service_record` (`servicecode`,`id_number`,`commission` ) VALUES ( '$servicecode', '$id_number', '$commission')";
+    $insert_information = "INSERT INTO `service_record` (`id`,`servicecode`,`id_number`,`commission` ) VALUES ( '$id','$servicecode', '$id_number', '$commission')";
     
     if (mysqli_query($con, $insert_information)) {
       echo"
@@ -35,6 +35,26 @@
                       <label for="validationCustom01">ID</label>
                       <input name="id" type="text" class="form-control" id="validationCustom01" autofocus required>
                   </div> -->
+          <tr>
+          <td>ID</td>
+          <td>
+          <select name="id" required>
+            <option value="">Customer Number</option>
+          <?
+            
+              $sql = "SELECT * FROM customer_record";
+              $records=mysqli_query($con,$sql);
+              while($information=mysqli_fetch_assoc($records)){
+
+          ?>
+              <option value="<?php echo $information['id'] ?>"><?php echo $information['id']; ?></option>
+          <?php
+            }
+            ?>
+            
+          
+          </select></br>
+                  
           <tr>
           <td>Types of Service</td>
           <td>
