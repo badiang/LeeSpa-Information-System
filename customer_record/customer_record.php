@@ -2,7 +2,6 @@
   session_start();
   require 'connect2.php';
   if(isset($_POST['save'])){
-    //$id = $_POST['id'];
     $date = $_POST['date'];
     $id_number = $_POST['id_number'];
     
@@ -34,14 +33,10 @@
     <h1>Customer Record</h1>
      <form class="needs-validation" action="" method='post'>
         <div class="textbox">
-         <!-- <div class="textbox">
-              <label for="validationCustom01">ID</label>
-              <input name="id" type="text" class="form-control" id="validationCustom01" placeholder="ID"  autofocus required>
-          </div>-->
         </div>
           <div class="textbox">
               <label for="validationCustom01">Date</label>
-              <input name="date" type="text" class="form-control" id="validationCustom01" placeholder="Date"  autofocus required>
+              <input name="date" data-format='yyyy/mm/dd' type="date" class="form-control" id="validationCustom01" placeholder="Date"  autofocus required>
           </div>
         </div>
          <tr>

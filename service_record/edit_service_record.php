@@ -12,14 +12,14 @@
 
 	
    if(isset($_POST['update'])){
-	/*	$id = $_POST['id'];*/
+	$id = $_POST['id'];
 		$servicecode = $_POST['servicecode'];
     $id_number = $_POST['id_number'];
 
 
 
     
-    $update = "UPDATE `service_record` SET /*`id`='$id',*/`servicecode`='$servicecode',`id_number`='$id_number' WHERE id=".$contact_id;
+    $update = "UPDATE `service_record` SET `id`='$id',`servicecode`='$servicecode',`id_number`='$id_number' WHERE id=".$contact_id;
     if (mysqli_query($con, $update)) {
 
       header('location: read_service_record.php');
@@ -32,6 +32,10 @@
 ?>
 <!DOCTYPE html>
 <html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
   <title>Le Spa</title>
 <body>
     <h1>Service</h1>
@@ -40,9 +44,21 @@
   <div class="form-row">
     <div class="col-md-4 mb-3">
       <input type="hidden"  name="contact_id" value="<?php echo $row[0]; ?>">
-   <!--    <label for="validationCustom01">ID</label>
-   <input name="id" type="text" value="<?php  echo $row['id'];  ?>" class="form-control" id="validationCustom01"   autofocus required>
-     </div> -->
+      <td>ID</td>
+          <td>
+          <select name="id" required>
+          <?
+            
+              $sql = "SELECT * FROM customer_record";
+              $records=mysqli_query($con,$sql);
+              while($information=mysqli_fetch_assoc($records)){
+
+          ?>
+              <option value="<?php echo $information['id'] ?>"><?php echo $information['id']; ?></option>
+          <?php
+            }
+            ?>
+          </select></br>
   <td>Service Code</td>
           <td>
           <select name="servicecode" required>
