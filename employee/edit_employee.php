@@ -73,6 +73,7 @@
       <label for="validationCustom02">Middle Initial:</label>
       <input name="middle_name" type="text" value="<?php  echo $row['middle_name'];  ?>" class="form-control"  id="validationCustom02"  value="" required>
      </div>
+     
 	 
 	 
           <form class="myform" method="post">

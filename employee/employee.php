@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
-	<title>Lab_Exam</title>
+	<title>Le Spa</title>
 <body>
   <div class="w3-sidebar w3-bar-block w3-black w3-xxlarge" style="width:70px">
   <a href="../main.html" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a> 

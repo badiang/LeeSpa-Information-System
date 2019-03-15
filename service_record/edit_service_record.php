@@ -110,7 +110,7 @@
 
           <form class="myform" method="post">
                     <input class="btn" type="submit" name ="update" id="save_btn" value="Update" autofocus required />
-                    <a href ="read.php"><input class="btn" type="button" id="list_btn" value="Read"/><br></a>
+                    <a href ="read_service_record.php"><input class="btn" type="button" id="list_btn" value="Read"/><br></a>
           </form>
     </form>
 </td>
