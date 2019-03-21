@@ -30,6 +30,8 @@
 <html>
   <title>Lee Spa</title>
 <body>
+  <div class="row">
+    <div class="col-sm-8">
     <h1>Customer Record</h1>
      <form class="needs-validation" action="" method='post'>
         <div class="textbox">
@@ -38,7 +40,6 @@
               <label for="validationCustom01">Date</label>
               <input name="date" data-format='yyyy/mm/dd' type="date" class="form-control" id="validationCustom01" placeholder="Date"  autofocus required>
           </div>
-        </div>
          <tr>
           <td>Customer Name</td>
           <td>
@@ -58,14 +59,24 @@
           
           </select>
 
+        </br>
+
            <form class="myform" method="post">
                     <input class="btn" type="submit" name ="save" id="save_btn" value="Create"/>
                     <a href ="read_customer_record.php"><input class="btn" type="button" id="read_btn" value="Read"/><br></a>
                     <a class="btn" href="../main.html">Home</a>
+  
+          <div class="col-sm-4">
+          <h1>GWAPO ANG TAG-IYA</h1>
+          <p><bold>Nganong Gwapo man ka BADIANG</bold></p>
+          
+        </div>
           </form>
         </td>
       </tr>
-           
-    </form>
+     </div> 
+     </div>    
+     </form>
+     </div> 
 </body>
 </html>

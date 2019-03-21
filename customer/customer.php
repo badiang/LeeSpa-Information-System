@@ -29,10 +29,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="w3.css">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css"> 
 </head>
   <title>Le Spa</title>
 <body>
@@ -43,31 +45,31 @@
   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a>
   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash"></i></a> 
 </div>
-  <div class="login-box">
+  <div class="container" style="width: 450px ; drop shadow rectangle">
     <h1>Add New Customer</h1>
      <form class="needs-validation" action="" method='post'>
-        <div class="textbox">
-        <div class="textbox">
+   <div class="row">
+          <div class="col-6">
               ID Number
               <input name="id_number" type="text" class="form-control" id="validationCustom01" placeholder="Employee ID Number"  autofocus required>
           </div>
-        <div class="textbox">
+         <div class="form-group">
               <label for="validationCustom01">First Name</label>
               <input name="firstname" type="text" class="form-control" id="validationCustom01" placeholder="First Name"  autofocus required>
           </div>
-        <div class="textbox">
+          <div class="form-group">
               <label for="validationCustom01">Last Name</label>
               <input name="lastname" type="text" class="form-control" id="validationCustom01" placeholder="Last Name"  autofocus required>
           </div>
-          <div class="textbox">
+            <div class="form-group">
               <label for="validationCustom01">Middle Initial</label>
               <input name="middle_initial" type="text" class="form-control" id="validationCustom01" placeholder="Middle Initial"  >
           </div>
-          <div class="textbox">
+            <div class="form-group">
               <label for="validationCustom01">Home Address</label>
               <input name="address" type="text" class="form-control" id="validationCustom01" placeholder="Home Address"  autofocus required>
           </div>
-          <div class="textbox">
+            <div class="form-group">
               <label for="validationCustom01">Contact Number</label>
               <input name="contact" type="number" class="form-control" id="validationCustom01" placeholder="Contact Number"  autofocus required>
           </div>        

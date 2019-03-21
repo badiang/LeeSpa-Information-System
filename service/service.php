@@ -8,8 +8,7 @@
 	$duration = $_POST['duration'];
 	$commission = $_POST['commission'];
  
-    $insert_information = "INSERT INTO `service` (`servicecode`, `description`, `price`, `duration`, `commission` ) VALUES ('$Servicecode', '$description', '$price',
-	'$duration', '$commission')";
+    $insert_information = "INSERT INTO `service` (`servicecode`, `description`, `price`, `duration`, `commission` ) VALUES ('$Servicecode', '$description', '$price','$duration', '$commission')";
     
     if (mysqli_query($con, $insert_information)) {
       echo"
@@ -27,8 +26,23 @@
 
 <!DOCTYPE html>
 <html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="w3.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
 	<title>Lab_Exam</title>
 <body>
+  <div class="w3-sidebar w3-bar-block w3-black w3-xxlarge" style="width:70px">
+  <a href="../main.html" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a> 
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a> 
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a> 
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash"></i></a> 
+</div>
+   <div class="login-box">
 		<h1>Service</h1>
 		 <form class="needs-validation" action="" method='post'>
   			<div class="textbox">
@@ -57,7 +71,7 @@
     			<form class="myform" method="post">
 				            <input class="btn" type="submit" name ="save" id="save_btn" value="Create"/>
 				            <a href ="read.php"><input class="btn" type="button" id="read_btn" value="Read"/><br></a>
-                    <a class="btn" href="../main.html">Home</a>
+                   
   				</form>
 		</form>
 </body>
