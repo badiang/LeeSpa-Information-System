@@ -17,7 +17,7 @@ require 'connect2.php';
 	<title>Lee Spa</title>
 <body>
 		<div class="w3-sidebar w3-bar-block w3-black w3-xxlarge" style="width:70px">
- 	<a href="../main.html" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a> 
+ 	<a href="../main.php" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a> 
   	<a href="service.php" class="w3-bar-item w3-button"><i class="fa fa-plus-circle"></i>
   	<a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a> 
   	<a href="#" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a>
