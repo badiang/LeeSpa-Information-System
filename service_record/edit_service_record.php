@@ -89,6 +89,22 @@
           <?php
             }
             ?>
+              </select></br>
+           <td>Payment</td>
+          <td>
+          <select name="payment" required>
+          <?
+            
+              $sql = "SELECT * FROM service";
+              $records=mysqli_query($con,$sql);
+              while($information=mysqli_fetch_assoc($records)){
+
+          ?>
+              <option value="<?php echo $information['price'] ?>"><?php echo $information['price']; ?></option>
+          <?php
+            }
+            ?>
+          </select>
           </select></br>
            <td>Commission</td>
           <td>
