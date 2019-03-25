@@ -1,4 +1,4 @@
-<h1>Le Spa Information Systme</h1>
+<h1>Le Spa Information System</h1>
 #SourceCodeFree
 #EasyToDownload
 #CanUnderstandEasily
