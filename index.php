@@ -1,0 +1,18 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<h1>Lee<span>Spa</span></h1>
+	<link rel="stylesheet" href="bootstrap-4.0.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="indexstyle.css">
+	<title></title>
+</head>
+<body>
+	<div class="login-box">
+	
+<a class="btn" href="login.php">Login</a>
+	
+</body>
+</html>

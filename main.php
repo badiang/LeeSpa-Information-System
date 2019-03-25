@@ -1,0 +1,32 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<h1>Le<span>Spa</span></h1>
+	<link rel="stylesheet" href="bootstrap-4.0.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="main.css">
+	<title></title>
+</head>
+<body>
+<?php
+  if(isset($_SESSION['username'])){
+    echo '';
+  }
+  else{
+    header("location: login.php");
+  }
+?>
+	<div class="login-box">
+	
+<a class="btn" href="employee/employee.php">Employee</a>
+<a class="btn" href="customer/customer.php">Customer</a>
+<a class="btn" href="service/service.php">Services</a>
+<a class="btn" href="customer_record/customer_record.php">Customer Record</a>
+<a class="btn" href="service_record/service_record.php">Service Record</a>
+<a class="btn" href="logout.php">Log-out</a>
+
+	
+</body>
+</html>
