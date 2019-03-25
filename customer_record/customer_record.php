@@ -58,7 +58,7 @@
   </div>
 </div>
 <div class="form-row">
-        <div class= "col-md-12">
+        <div class= "col-md-6">
      <form class="needs-validation" action="" method='post'>
               <label for="validationCustom01">Date</label>
               <input name="date" data-format='yyyy/mm/dd' type="date" class="form-control" id="validationCustom01" placeholder="Date"  autofocus required>
