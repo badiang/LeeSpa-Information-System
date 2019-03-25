@@ -26,7 +26,7 @@ require 'connect2.php';
       		while($information=mysqli_fetch_assoc($records)){
       			echo "<tr>";?>
 						<td><?php echo $information['id'] ?></td>
-						<td><?php echo $information['transaction'] ?></td>
+						<td><?php echo $information['id_number'] ?></td>
 						<td><?php echo $information['description'] ?></td>
 						<td><?php echo $information['firstname'] ?></td>
 						<td><?php echo $information['price'] ?></td>

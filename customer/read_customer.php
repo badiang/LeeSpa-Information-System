@@ -5,6 +5,14 @@ require 'connect2.php';
 	$records=mysqli_query($con,$sql);
 
 ?>
+<?php
+  if(isset($_SESSION['username'])){
+    echo '';
+  }
+  else{
+    header("location: ../login.php");
+  }
+?>
 
 <!DOCTYPE html>
 <html>

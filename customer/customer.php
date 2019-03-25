@@ -24,14 +24,21 @@
 
 
 ?>
-
+<?php
+  if(isset($_SESSION['username'])){
+    echo '';
+  }
+  else{
+    header("location: ../login.php");
+  }
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link href="css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="#">
   <link rel="stylesheet" href="w3.css">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css"> 
@@ -40,10 +47,11 @@
 <body>
    <div class="w3-sidebar w3-bar-block w3-black w3-xxlarge" style="width:70px">
   <a href="../main.html" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a> 
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a> 
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a> 
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash"></i></a> 
+  <a href="../employee/employee.php" class="w3-bar-item w3-button"><i class="fa fa-address-book"></i></a>
+  <a href="../customer/customer.php" class="w3-bar-item w3-button"><i class="fa fa-address-book"></i></a>
+  <a href="../service/service.php" class="w3-bar-item w3-button"><i class="fa fa-user-secret"></i></a>
+  <a href="../customer_record/customer_record.php" class="w3-bar-item w3-button"><i class="fa fa-bookmark"></i></a>
+  <a href="../service_record/service_record.php" class="w3-bar-item w3-button"><i class="fa fa-cogs"></i></a>
 </div>
   <div class="container" style="width: 450px ; drop shadow rectangle">
     <h1>Add New Customer</h1>

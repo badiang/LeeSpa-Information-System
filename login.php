@@ -16,7 +16,7 @@
 		if($count== 1){
 			$_SESSION['id'] = $row[0];
 			$_SESSION['username'] = $row[1];
-			header('location: main.html');
+			header('location: main.php');
 		}else{
 			echo "<script>alert('Invalid Username/Password');</script>";
 		}
@@ -26,6 +26,7 @@
 
 
 ?>
+
 
 
 
