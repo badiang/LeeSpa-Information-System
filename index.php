@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<h1>Lee<span>Spa</span></h1>
+	<h1>Le<span>Spa</span></h1>
 	<link rel="stylesheet" href="bootstrap-4.0.0/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="indexstyle.css">
 	<title></title>

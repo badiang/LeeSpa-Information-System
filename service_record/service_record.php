@@ -30,6 +30,12 @@
     header("location: ../login.php");
   }
 ?>
+<!-- for desplay output -->
+<?php
+  $query=mysqli_query($con,"SELECT * FROM customer_record, customer WHERE customer_record.id_number = customer.id_number"); 
+
+?>
+
 
 
 <!DOCTYPE html>
@@ -52,15 +58,15 @@
   <a href="../service_record/service_record.php" class="w3-bar-item w3-button"><i class="fa fa-cogs"></i></a>
   </div>
 <br><br>
-    <table border="2px" width="30%" style="margin: 10px 100px;" >
-      <td>
       <div class="form-row">
-        <div class= "col-md-12">
-		<h1>Service Record</h1>
+        <div class= "col-md-6">
+    <table border="2px" width="70%" style="margin: 10px 100px;" >
+      <td>
   </div>
+  <div class= "col-md-6">
+		<h1>Service Record</h1> 
 </div>
-     <div class="form-row">
-        <div class= "col-md-12">
+ <div class= "col-md-6">
 		 <form class="needs-validation" action="" method='post'>
           Transaction Number
           <select name="transaction" required>
@@ -78,11 +84,9 @@
             ?>
         
           </select>
-        </div>
-      </div>
+ </div>
         <br>
-         <div class="form-row">
-         <div class= "col-md-12">
+         <div class= "col-md-6">
           Types of Service
           <select name="servicecode" id="serviceType" required>
             <option  value="">Select Service</option>
@@ -98,11 +102,10 @@
             }
             ?>
           </select>
-          </div>
         </div>
+     
         <br>
-         <div class="form-row">
-         <div class= "col-md-12">
+      <div class= "col-md-6">
         Employee Name
           <select name="id_number" required>
             <option value="">Select Employee Name</option>
@@ -118,11 +121,10 @@
             }
             ?>   
           </select>
-          </div>
         </div>
+   
            <br>
-            <div class="form-row">
-            <div class= "col-md-12">
+            <div class= "col-md-6">
         Payment
           <select id="payment" name="payment" required>
             <option value="">Select Employee Commission</option>
@@ -138,11 +140,10 @@
             }
             ?> 
           </select>
-          </div>
         </div>
+    
         <br>
-         <div class="form-row">
-         <div class= "col-md-12">
+       <div class= "col-md-6">
         Commission
           <select id="commission" name="commission" required>
             <option value="">Select Employee Commission</option>
@@ -158,26 +159,40 @@
             }
             ?>
         </select>
-      </div>
-    </div>
+          </div>
         <br>
-             <div class="form-row">
-           <div class= "col-md-6">
+         <div class= "col-md-6">
     			<form class="myform" method="post">
 				    <input class="btn" type="submit" name ="save" id="save_btn" value="Create"/>
 				    <a href ="read_service_record.php"><input class="btn" type="button" id="read_btn" value="Read"/><br></a>
-
-  				</form>
-                </div>
-                </div>
-              </form>
+          </form>
+  			</form>     
         </td>
       </table>
     </div>
-  </div>
-</td>
-</table>
-    </br>
+  
+
+
+        <div class= "col-md-6">
+
+<table border="2px" width="50%" style="margin: 10px 100px;" >
+        <tr>
+         <th class="text-center">Transaction#</th>
+          <th class="text-center">Date</th>
+          <th class="text-center">Customer Name</th>
+        </tr>
+          <?php $i=1;
+          while($rows=mysqli_fetch_array($query)){
+            echo "<tr>";?>
+            <td class="text-center"><?php echo $i; $i++; ?></td>
+            <td class="text-center"><?php echo $rows['date'] ?></td>
+            <td class="text-center"><?php echo $rows['firstname'] ?></td>
+      <?php
+        }
+        ?>
+      </table>
+    </div>
+</div>
     <script src="jquery-3.3.1.min.js"></script>
     <script>
     	$('document').ready(function(){

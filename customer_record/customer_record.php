@@ -27,6 +27,11 @@
     header("location: ../login.php");
   }
 ?>
+<!-- for desplay output -->
+<?php
+  $query=mysqli_query($con,"SELECT * FROM customer_record, customer WHERE customer_record.id_number = customer.id_number"); 
+
+?>
 
 
 <!DOCTYPE html>
@@ -38,6 +43,9 @@
   <link rel="stylesheet" href="w3.css">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
   <title>Le Spa</title>
 <body>
@@ -50,13 +58,27 @@
   <a href="../service_record/service_record.php" class="w3-bar-item w3-button"><i class="fa fa-cogs"></i></a>
   </div>
   <br><br>
-<table border="2px" width="30%" style="margin: 10px 100px;" >
+  <div class="row">
+  <div class="col-6">
+<table border="2px" width="50%" style="margin: 10px 100px;" >
       <td>
       <div class="form-row">
         <div class= "col-md-12">
     <h1>Customer Record</h1>
   </div>
 </div>
+<!-- <div class="row">
+  <div class="col-6">
+    
+../////
+  </div>
+  <div class="col-6">
+  
+  ..////  
+
+  </div>
+  
+</div> -->
 <div class="form-row">
         <div class= "col-md-6">
      <form class="needs-validation" action="" method='post'>
@@ -100,6 +122,39 @@
         </div>
       </td>
     </table>
+      <table border="2px" width="50%" style="margin: 10px 100px;" >
+        <tr>
+          <th>#</th>
+          <th>Date</th>
+          <th>Customer Name</th>
+            <th colspan='3'>Action</th>
+        </tr>
+          <?php $i=1;
+          while($rows=mysqli_fetch_array($query)){
+            echo "<tr>";?>
+            <td><?php echo $i; $i++; ?></td>
+            <td><?php echo $rows['date'] ?></td>
+            <td><?php echo $rows['firstname'] ?></td>
+            <td>
+                <a href="delete_customer_record.php?delete_id=<?php echo $rows['id_number']; ?>">Delete</i></a>
+            </td>
+            <td>
+              <a href="edit_customer_record.php?edit_id=<?php echo $rows['id']; ?>">Edit</i></a>
+            </td>
+            <td>
+              <a href="customer_record.php">Add</i></a>
+            </td>
+          </tr>
+
+
+          </tr>
+      <?php
+        }
+        ?>
+      </table>
+    </div>
+  </div>
+  
   </body>
   </html>
      

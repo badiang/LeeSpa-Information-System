@@ -21,7 +21,7 @@
     $update = "UPDATE `customer_record` SET `date`='$date',`id_number`='$id_number' WHERE id=".$contact_id;
     if (mysqli_query($con, $update)) {
 
-      header('location: read_customer_record.php');
+      header('location: customer_record.php');
     }else {
       echo "Error: " . $update . "<br>" . mysqli_error($con);
     }
